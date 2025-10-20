@@ -1,9 +1,12 @@
 body{
-    min-height: 100vh;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    font-style: 14px;
-    line-height: 24px;
-    color: #373a39;
-    font-style: normal;
+    font-style: 16px;
+    color: $default;
+    line-height: 26px;
+    @extend %quicksand-500;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
