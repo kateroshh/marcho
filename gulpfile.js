@@ -37,7 +37,11 @@ export function styles() {
 
 export function scripts() {
   return gulp
-    .src(['node_modules/jquery/dist/jquery.min.js', './app/js/**/*.js'])
+    .src([
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/slick-carousel/slick/slick.js',
+      './app/js/main.js',
+    ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./app/js'));
