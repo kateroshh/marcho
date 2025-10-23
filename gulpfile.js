@@ -23,10 +23,7 @@ export function serverInit() {
 
 export function styles() {
   return gulp
-    .src([
-      // './node_modules/@fancyapps/ui/dist/fancybox/fancybox.css',
-      './app/scss/**/*.scss',
-    ])
+    .src('./app/scss/**/*.scss')
     .pipe(sass({ style: 'compressed' }).on('error', sass.logError))
     .pipe(concat('style.min.css'))
     .pipe(
@@ -44,6 +41,7 @@ export function scripts() {
       './node_modules/jquery/dist/jquery.min.js',
       './node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
       './node_modules/slick-carousel/slick/slick.min.js',
+      './node_modules/@rateyo/jquery/lib/iife/jquery.rateyo.js',
       './app/js/main.js',
     ])
     .pipe(concat('main.min.js'))

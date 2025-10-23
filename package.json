@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@fancyapps/ui": "^6.1.0",
+    "@rateyo/jquery": "^3.0.0-alpha.2",
     "browser-sync": "^3.0.4",
     "del": "^8.0.1",
     "gulp": "^5.0.1",

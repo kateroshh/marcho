@@ -453,5 +453,138 @@
     }
 }
 
+.product{
+    padding: 105px 0 120px;
+    text-align: center;
+
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 45px 30px;
+    }
+
+    &__link{
+        text-transform: uppercase;
+        color: $title;
+        display: inline-block;
+        border: 1px solid $accent;
+        padding: 14px 27px;
+        transition: all .3s;
+        margin-top: 55px;
+
+        &:hover{
+            background-color: $accent;
+            color: #fff;
+        }
+    }
+
+}
+
+.produc-item{
+    max-width: 370px;
+    text-align: center;
+
+    &__img-box{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 25px;
+        height: 370px;
+    }
+
+    &__images{
+        object-fit: cover;
+    }
+
+    &__link-box{
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        width: 220px;
+        height: 50px;
+        margin: 0 auto;
+        box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+        border-radius: 22px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateY(300%);
+        transition: all .3s;
+    }
+
+    &__link{
+        display: inherit;
+
+        path {
+            transition: all .3s;
+        }
+        &:hover{
+            path {
+                fill: $accent;
+            }
+        }
+    }
+
+    &__link--line::before,
+    &__link--line::after{
+        content: '';
+        position: absolute;
+        top: 10px;
+        width: 1px;
+        height: 30px;
+        background-color: #ececec;
+    }
+
+    &__link--line::before{
+        left: 70px;
+    }
+
+    &__link--line::after{
+        right: 70px;
+    }
+
+    &:hover{
+        .produc-item__link-box{
+            transform: translateY(0);
+        }
+    }
+
+    &__title{
+        color: $title;
+        padding: 15px 0 20px;
+    }
+
+    &__price{
+        display: flex;
+        justify-content: center;
+        @extend %roboto-400;
+    }
+
+    &__new-price{
+        padding: 0 12px;
+        color: $title;
+    }
+
+    &__old-price{
+        text-decoration: line-through;
+        padding: 0 12px;
+    }
+
+    &--sale{
+        .produc-item__img-box::before{
+            content: 'SALE';
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            @extend %btn;
+            line-height: 1;
+        }
+    }
+}
+
+.star{
+    margin: 0 auto;
+}
 
 @import 'media';
